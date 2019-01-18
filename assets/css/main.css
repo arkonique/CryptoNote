@@ -1,0 +1,82 @@
+@font-face {
+	src: url('../webfonts/Raleway-ExtraLight.ttf');
+	font-family: 'Raleway';
+}
+
+body {
+    margin: 0;
+    background: #444444;
+}
+
+.connection {
+    position: fixed;
+    padding: 40px;
+    background: #ff7878;
+    color: white;
+    font-family: raleway;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    justify-content: center;
+    display: none;
+}
+
+.currency {
+	display: flex;
+    padding: 10px;
+    align-items: center;
+    justify-content: space-between;
+    background: #9494942c;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    border-bottom: 5px solid deeppink;
+    box-shadow: 0 0 5px black;
+    margin-bottom: 5px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+
+.currency:hover {
+	background: white;
+	color: #444;
+}
+
+.price-container {
+	text-align: center;
+}
+
+.price {
+	background: #0000008f;
+    padding: 20px;
+    border-radius: 10px;
+    border-bottom: 3px solid deeppink;
+}
+
+.notificationbtn {
+	padding: 20px;
+    border-radius: 10px;
+    background: deeppink;
+    border: none;
+    color: white;
+    font-weight: bold;
+    outline: none;
+    border-bottom: 3px solid #b30c66;
+    font-family: 'Raleway', sans-serif;
+}
+
+.notificationbtn:hover {
+	border-bottom: 0px solid #b30c66;
+	cursor: pointer;
+}
+
+.target-container p {
+	display: flex;
+	align-items: center; 
+}
+
+.target-container .fa-sort-up {
+	font-size: 30px;
+	color: deeppink;
+	text-shadow: 0 3px 3px #444;
+	margin: 10px;
+}
