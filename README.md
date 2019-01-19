@@ -35,7 +35,7 @@ npm install electron --save-dev --save-exact
 4. Install `electron-packager`
 
 ```bash
-npm install electron-packager --save-dev
+npm install electron-builder --save-dev
 ```
 
 5. Install `electron-json-storage`

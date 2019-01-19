@@ -5,10 +5,8 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=assets/icons/mac/icon.icns --prune=true --out=release-builds",
-    "package-win": "electron-packager . --overwrite --asar=true --platform=win32 --arch=ia32 --icon=assets/icons/win/icon.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Crypto Note - Stay Updated on the latest trends\"",
-    "package-win64": "electron-packager . --overwrite --asar=true --platform=win32 --arch=x64 --icon=assets/icons/win/icon.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Crypto Note - Stay Updated on the latest trends\"",
-    "package-linux": "electron-packager . crypto-note --overwrite --asar=true --platform=linux --arch=x64 --icon=assets/icons/png/icon.png --prune=true --out=release-builds"
+    "pack": "build --dir -mwl",
+    "dist": "build -mwl"
   },
   "keywords": [
     "cryptocurrency",
@@ -18,14 +16,27 @@
   "license": "ISC",
   "devDependencies": {
     "electron": "4.0.1",
-    "electron-packager": "^13.0.1"
+    "electron-builder": "^20.38.5"
   },
   "dependencies": {
     "axios": "^0.18.0",
     "electron-json-storage": "^4.1.5"
   },
   "build": {
-    "appId": "crypto-note"
+    "appId": "crypto-note",
+    "mac": {
+      "category": "public.app-category.finance"
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ]
+    },
+    "win": {
+      "target": "NSIS",
+      "icon": "build/icon.ico"
+    }
   },
   "repository": {
     "type": "git",
